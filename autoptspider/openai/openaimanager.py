@@ -13,7 +13,7 @@ class OpenAIManager:
     @staticmethod
     def get_response(messages: list):
         if not openai.api_key:
-            raise ChatGPTException("尚未设置 OpenAI API Key，无法是用此功能")
+            raise ChatGPTException("尚未设置 OpenAI API Key，无法使用此功能")
         res = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=messages
